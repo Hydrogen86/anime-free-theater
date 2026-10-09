@@ -189,7 +189,7 @@ to {
     }
 
     .hero__actions {
-        align-items: flex-start;
+        align-items: center;
         gap: 22px;
         margin-top: 28px;
     }

@@ -35,19 +35,24 @@
 }
 
 .gallery-item img{
-    /* max-width: 400px; clamp(minimum, preferred, maximum); */
-    width: clamp(280px, 5vw, 500px);
-    height: clamp(180px, 5vw, 300px);
+    width: min(100%, 500px);
+    height: clamp(150px, 20vh, 250px);
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .item__text-area {
     text-align: center;
     color: var(--secondary-color);
 
+    .item-heading {
+        font-size: clamp(.8rem, 1vw, 1.2rem);
+    }
+
     .season-description {
         font-family: var(--font-light);
         font-weight: 400;
+        font-size: clamp(12px, 1vw, 14px);
     }
 }
 
