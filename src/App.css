@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Isometra&family=Manrope:wght@200..800&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --primary-color: #111111;
+  --secondary-color: #ffffff;
+  --highlights-color: #d473f2;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: fantasy;
+}
