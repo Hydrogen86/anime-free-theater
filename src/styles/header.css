@@ -57,14 +57,14 @@ header {
 
 
 
-@media (max-width: 785px) {
+@media (max-width: 800px) {
     header {
         padding: .4rem 2rem;
         font-size: 1rem;
     }
 
 }
-@media (max-width: 485px) {
+@media (max-width: 600px) {
     header {
         padding: .2rem 1rem;
 

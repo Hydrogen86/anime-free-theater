@@ -50,6 +50,15 @@ const Gallery = () => {
         </div>
       </div>
 
+      <div className="gallery-item">
+        <img src={acientMagnus} alt="item-1" />
+
+        <div className="item__text-area">
+            <span className='item-heading'>The Acient Magnus Bride</span>
+            <p className='season-description'>Season 1 (12 Episodes)</p>
+        </div>
+      </div>
+
     </div>
   )
 }
