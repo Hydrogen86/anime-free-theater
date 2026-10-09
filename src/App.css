@@ -4,6 +4,8 @@
   --primary-color: #111111;
   --secondary-color: #ffffff;
   --highlights-color: #d473f2;
+
+  --font-light: "Inter", sans-serif;
 }
 
 
@@ -14,6 +16,12 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(74, 91, 255, 0.18),
+      transparent 35%),
+    linear-gradient(135deg, #0b0d17, #111526 60%, #090b12)
+  ;
   font-family: fantasy;
 }

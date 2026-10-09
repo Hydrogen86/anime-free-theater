@@ -46,14 +46,13 @@ const Hero = () => {
                     </a>
 
                     <a href="#about" className="hero__link">
-                        Learn More
-                    </a>
+                        Contact Us                    </a>
                 </div>
             </div>
 
             <div className="hero__decoration">
-                <span>STREAM</span>
-                <span>UPLOADS</span>
+                <span>WATCH</span>
+                <span>RELAX</span>
                 <span>NO ADS</span>
             </div>
         </section>

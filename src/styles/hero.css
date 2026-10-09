@@ -20,13 +20,6 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    /* background:
-        radial-gradient(
-            circle at 80% 30%,
-            rgba(74, 91, 255, 0.18),
-            transparent 35%),
-        linear-gradient(135deg, #0b0d17, #111526 60%, #090b12)
-    ; */
     background:
     linear-gradient(
         90deg,
@@ -117,13 +110,17 @@
 .hero__link {
     color: #d1d5e4;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
     transition: color 0.25s ease;
+    font-family: "Inter", sans-serif;
+    transition: .3s ease-in;
 }
 
+
 .hero__link:hover {
-    color: #a5b4fc;
+    color: var(--highlights-color);
+    scale: calc(1.2);
 }
 
 /* Decorative Text */
@@ -140,6 +137,7 @@
     letter-spacing: 0.12em;
     user-select: none;
     pointer-events: none;
+    opacity: 60%;
 }
 
 .hero__decoration span:nth-child(2) {

@@ -1,11 +1,5 @@
 import { useState } from 'react'
-
-//-----------------------------------------------
-//---------------CSS Styles----------------------
-//-----------------------------------------------
 import './App.css'
-import './styles/header.css'
-import './styles/hero.css'
 
 
 //-----------------------------------------------
@@ -13,12 +7,15 @@ import './styles/hero.css'
 //-----------------------------------------------
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Gallery from './components/Gallery'
+
 
 function App() {
   return (
     <>
       <Navbar/>
       <Hero/>
+      <Gallery/>
     </>
   )
 }

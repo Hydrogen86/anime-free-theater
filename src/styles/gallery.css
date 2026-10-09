@@ -1,0 +1,50 @@
+@import url(../App.css);
+
+.gallery {
+    padding: 2rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gallery-item {
+    background-color: #d473f217;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: .5rem;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+/* Blur all cards when hovering over the container */
+.gallery:hover .gallery-item {
+    filter: blur(4px);
+    transform: scale(0.95);
+}
+
+/* Keep the hovered card clear */
+.gallery .gallery-item:hover {
+    filter: blur(0);
+    transform: scale(1.05);
+}
+
+.gallery-item img{
+    max-width: 400px;
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+.item__text-area {
+    text-align: center;
+    color: var(--secondary-color);
+
+    .season-description {
+        font-family: var(--font-light);
+        font-weight: 400;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../assets/icons/logo.jpg'
 import Swal from 'sweetalert2'
+import '../styles/header.css'
 
 const Navbar = () => {
 
