@@ -13,7 +13,7 @@ import onePunchMan from '../assets/images/one-punch-man.jpg'
 
 const Gallery = () => {
   return (
-    <div className='gallery'>
+    <div className='gallery' id='gallery'>
       <div className="gallery-item">
         <img src={haikyuu} alt="item-1" />
 

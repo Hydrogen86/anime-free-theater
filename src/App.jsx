@@ -8,6 +8,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <Gallery/>
+      <Footer/>
     </>
   )
 }

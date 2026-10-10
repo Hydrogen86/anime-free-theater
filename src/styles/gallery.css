@@ -10,7 +10,7 @@
 }
 
 .gallery-item {
-    background-color: #d473f217;
+    background-color: var(--light-black);
     width: clamp(300px, 5vw, 450px);
     display: flex;
     flex-direction: column;
@@ -24,7 +24,6 @@
 }
 /* Blur all cards when hovering over the container */
 .gallery:hover .gallery-item {
-    filter: blur(4px);
     transform: scale(0.95);
 }
 

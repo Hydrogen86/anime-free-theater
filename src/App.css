@@ -4,6 +4,7 @@
   --primary-color: #111111;
   --secondary-color: #ffffff;
   --highlights-color: #d473f2;
+  --light-black: #d473f217;
 
   --font-light: "Inter", sans-serif;
 }
@@ -24,4 +25,5 @@ body {
     linear-gradient(135deg, #0b0d17, #111526 60%, #090b12)
   ;
   font-family: fantasy;
+  scroll-behavior: smooth;
 }

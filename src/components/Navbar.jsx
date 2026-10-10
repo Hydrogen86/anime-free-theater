@@ -24,7 +24,7 @@ const Navbar = () => {
         <a href="#" onClick={showAlert}>Home</a>
         <a href="#" onClick={showAlert}>About Us</a>
         <a href="#" onClick={showAlert}>Contact Us</a>
-        <a href="#" onClick={showAlert}>Videos</a>
+        <a href="#gallery">Videos</a>
       </nav>
 
       <div className="humburger">

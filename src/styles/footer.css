@@ -1,0 +1,52 @@
+@import url(../App.css);
+
+footer {
+    font-family: var(--font-light);
+    font-size: 1rem;
+    background-color: #000000ca;
+    /* background-color: var(--light-black); */
+    height: auto;
+    display: flex;
+    
+    align-items: center;
+    gap: 3rem;
+    padding: 0 2rem;
+
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.heading-title {
+    font-size: 3rem;
+    font-family: fantasy;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+footer img {
+    width: clamp(150px, 30vw, 400px);
+    height: clamp(100px, 50vh, 300px);
+}
+
+.footer__right-image {
+    opacity: 20%;
+    position: absolute;
+    right: 0;
+}
+
+.footer__right-image img {
+    object-fit: cover;
+}
+.social-icons {
+    display: flex;
+    gap: 1.3rem;
+}
+.social-icons img{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
