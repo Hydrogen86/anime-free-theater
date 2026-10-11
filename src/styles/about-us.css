@@ -1,0 +1,68 @@
+@import url(../App.css);
+
+.about-us {
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(2rem, 50vw, 5rem);
+    color: var(--secondary-color);
+}
+
+.about-us img{
+    width: clamp(150px, 50vw, 400px);
+    filter: drop-shadow(30px 10px 20px #0000009f);    
+    animation: floating 3s ease-in-out infinite;
+    transition: .3s ease;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.about-us img:hover {
+    scale: calc(1.05);
+}
+
+.about-us__description {
+    max-width: clamp(350px, 50vw, 650px);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vh, 4rem);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+
+
+.about-us__description p {
+    font-family: var(--font-light);
+    font-size: clamp(.9rem, 2vh, 1.3rem);
+    line-height: 1.7rem;
+}
+
+@media (max-width: 600px) {
+    .about-us {
+        flex-direction: column;
+        padding: 3rem 2rem;
+    }
+    .about-us__description {
+        text-align: center;
+    }
+}
+@media (max-width: 800px) {
+    .about-us {
+        flex-direction: column;
+        padding: 3rem 2rem;
+    }
+    .about-us__description {
+        text-align: center;
+    }
+}
