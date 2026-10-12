@@ -1,6 +1,7 @@
 @import url(../App.css);
 
 .about-us {
+    margin-top: clamp(.5rem, 20vh, 3rem);
     padding: 3rem 5rem;
     display: flex;
     justify-content: center;

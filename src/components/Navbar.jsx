@@ -22,8 +22,8 @@ const Navbar = () => {
 
       <nav>
         <a href="#" onClick={showAlert}>Home</a>
-        <a href="#" onClick={showAlert}>About Us</a>
-        <a href="#" onClick={showAlert}>Contact Us</a>
+        <a href="#about-us">About Us</a>
+        <a href="#contact-us">Contact Us</a>
         <a href="#gallery">Videos</a>
       </nav>
 

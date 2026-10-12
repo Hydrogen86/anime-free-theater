@@ -4,7 +4,7 @@ import aboutUsImage from '../assets/images/killua.png'
 
 const AboutUs = () => {
   return (
-    <section className='about-us'>
+    <section className='about-us' id='about-us'>
         <img src={aboutUsImage} alt="about-us-image" />
         <div className="about-us__description">
             <h1>ABOUT US</h1>

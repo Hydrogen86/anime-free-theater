@@ -1,0 +1,74 @@
+@import url(../App.css);
+
+.contact-us {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.contact-us__design {
+    width: clamp(300px, 50vw, 600px);
+    position: relative;
+}
+
+.contact-us__design .about-us__main-image {
+    width: clamp(200px, 40vw, 450px);
+    filter: drop-shadow(30px 10px 20px #0000006d);    
+    cursor: pointer;
+}
+
+.contact-us__design .bubble-text {
+    position: absolute;
+    right: 20%;
+    width: clamp(30px, 10vw, 80px);
+    animation: pulse 1.2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+.contact-form__container {
+    display: flex;
+}
+
+.contact-form__container img {
+    width: clamp(150px, 30vw, 190px);
+    height: auto;
+    margin-right: -47px;
+    z-index: 5;
+
+}
+
+.contact-form__container form {
+    border: none;
+    border-radius: 16px 0 16px 0;
+    padding: 3rem;
+    width: clamp(250px, 30vw, 450px);
+    height: clamp(450px, 50vh, 700px);
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+    .contact-us {
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* @media (max-width: 800px) {
+    .contact-us {
+        
+    }
+} */

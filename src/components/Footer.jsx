@@ -39,8 +39,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer__right-image'>
-                <img src={footerImageMiddle} alt="right-img__footer" />
-                <img src={footerImageRight} alt="middle-img__footer" />
+                <img src={footerImageRight} alt="right-img__footer" />
+                <img src={footerImageMiddle} alt="middle-img__footer" />
             </div>
         </footer>
     )   
