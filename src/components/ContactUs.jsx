@@ -8,7 +8,7 @@ import Heart from '../assets/icons/heart.png'
 import Shy from '../assets/images/Shy Pink-Haired.png'
 
 const ContactUs = () => {
-    const [image, setImage] = useState(0);
+    const [image, setImage] = useState(anyaHoverOut);
     return (
         <section className='contact-us' id='contact-us'>
             <div className="contact-us__design">
@@ -22,10 +22,13 @@ const ContactUs = () => {
             <div className="contact-form__container">
                 <img src={Shy} alt="shy-image" />
                 <form action="">
+                    <h1>CONTACT US</h1>
                     <label htmlFor="email">Email</label><br/>
                     <input type="email" placeholder='Enter here...' required/><br />
                     <label htmlFor="message">Message</label><br/>
                     <textarea name="message" id="message" placeholder='type here...' required></textarea><br />
+
+                    <button type='submit'>Submit</button>
                 </form>
             </div>
         </section>

@@ -57,6 +57,23 @@
     width: clamp(250px, 30vw, 450px);
     height: clamp(450px, 50vh, 700px);
     background-color: var(--secondary-color);
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.contact-form__container form input, textarea{
+    width: 100%;
+    font-size: 1rem;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    border: gray 1px solid;
+}
+
+.contact-form__container form button {
+    width: 100%;
+    margin-top: 2rem;
 }
 
 @media (max-width: 600px) {
