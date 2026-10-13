@@ -91,7 +91,42 @@
 
 
 .contact-form__container {
-    display: flex;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 18px 0 18px 0;
+    isolation: isolate;
+    padding: 5px;
+}
+.contact-form__container::before{
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        magenta,
+        red
+    );
+    animation: spin 4s linear infinite;
+    z-index: -2;
+}
+.contact-form__container::after{
+    content: "";
+    z-index: -1;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .contact-form__container form {
@@ -110,10 +145,25 @@
 
     h1 {
         font-size: clamp(1.5rem, 3vw, 3rem);
+        color: #242424;
     }
 
     .input-field {
         width: 100%;
+        font-family: var(--font-light);
+        color: #242424;
+    }
+
+    .input-field label{
+        font-weight: bold;
+    }
+    .input-field input{
+        margin-bottom: .5rem;
+    }
+    input:focus,
+    textarea:focus {
+        border-color: #8b5cf6;
+        box-shadow: 0 0 8px #8b5cf680;
     }
 }
 
@@ -122,13 +172,16 @@
     font-size: 1rem;
     padding: .5rem .5rem;
     border-radius: 4px;
-    border: gray 1px solid;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 textarea {
     height: clamp(40px, 10vh, 200px);
     resize: none;
 }
+
 
 .contact-form__container form button {
     width: 100%;
@@ -143,6 +196,12 @@ textarea {
 }
 
 
+@media (max-width: 1000px) {
+    .contact-us__design .bubble-text__icon{
+        right: 3%;
+        top: 40%;
+    }
+}
 @media (max-width: 800px) {
     .contact-us {
         flex-direction: column;
@@ -154,14 +213,6 @@ textarea {
     }
     
 }
-
-@media (max-width: 1000px) {
-    .contact-us__design .bubble-text__icon{
-        right: 3%;
-        top: 40%;
-    }
-}
-
 @media (max-width: 600px) {
     .contact-us {
         margin-top: 1rem;
@@ -177,6 +228,9 @@ textarea {
     .contact-us__design .bubble-text__icon{
         right: 5%;
         top: 65%;
+    }
+    .contact-form__container {
+        padding: 3px;
     }
 
 }
