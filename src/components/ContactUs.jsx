@@ -12,8 +12,16 @@ const ContactUs = () => {
     return (
         <section className='contact-us' id='contact-us'>
             <div className="contact-us__design">
-                
-                <img src={Heart} className='bubble-text' alt="" />
+
+                <div className="bubble-text">
+                    <h2>Let's Connect!</h2>
+                    <p>Have feedback, suggestions, or found something that needs fixing? We'd love to hear from you!
+                    Whether you want to share ideas, report a bug, recommend new features, or collaborate with us, feel free to reach out. Every message helps us make your anime experience better.</p>
+                    <span>Got something in mind? Let's hear it!</span>
+
+                    <div className="triangle"></div>
+                </div>
+                <img src={Heart} className='bubble-text__icon' alt="" />
                 <img src={image} 
                 onMouseEnter={() => setImage(anyaHoverEnter)}
                 onMouseLeave={() => setImage(anyaHoverOut)}
@@ -24,7 +32,6 @@ const ContactUs = () => {
             </div>
 
             <div className="contact-form__container">
-                <img src={Shy} alt="shy-image" />
                 <form action="">
                     <h1>CONTACT US</h1>
                     <div className="input-field">
