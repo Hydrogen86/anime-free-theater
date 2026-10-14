@@ -8,7 +8,7 @@ const heroImages = [
         images.bleach, 
         images.haikyuOne,
         images.haikyuTwo,
-        images.onePieace,
+        images.onePiece,
         images.onePunchMan
     ];
 

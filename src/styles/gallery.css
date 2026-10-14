@@ -56,6 +56,12 @@
 }
 
 
+@media (max-width: 1000px) {
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+}
 @media (max-width: 600px) {
     .gallery {
         flex-direction: column;
