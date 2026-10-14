@@ -5,6 +5,8 @@ import instagram from './icons/instagram.png';
 import logo from './icons/logo.jpg';
 import tiktok from './icons/tiktok.png';
 import twitter from './icons/twitter.png';
+import rightArrow from './icons/right-arrow.png';
+import leftArrow from './icons/left-arrow.png';
 
 const icons = {
     discord,
@@ -13,7 +15,9 @@ const icons = {
     instagram,
     logo,
     tiktok,
-    twitter
+    twitter,
+    leftArrow,
+    rightArrow
 }
 
 export default icons

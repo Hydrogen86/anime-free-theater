@@ -14,6 +14,22 @@ import onePunchMan from './images/one-punch-man.jpg'
 import shy from './images/Shy-Pink-Haired.png'
 import sukuna from './images/sukuna.png'
 
+
+//----------------------------------------------------------
+//--------------JUJUTSU KAISEN------------------------------
+//----------------------------------------------------------
+import jujutsuKaisenOne from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-1.jpg'
+import jujutsuKaisenTwo from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-2.jpg'
+import jujutsuKaisenThree from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-3.jpg'
+import jujutsuKaisenFour from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-4.jpg'
+import jujutsuKaisenFive from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-5.jpg'
+import jujutsuKaisenSix from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-6.jpg'
+import jujutsuKaisenSeven from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-7.jpg'
+import jujutsuKaisenEight from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-8.jpg'
+import jujutsuKaisenNine from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-9.jpg'
+import jujutsuKaisenTen from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-10.jpg'
+
+
 const images = {
     acientMagnusBride,
     anyaOne,
@@ -71,7 +87,21 @@ const videos = [
     }
 ]
 
+const jujutsuKaisenImages = {
+    jujutsuKaisenOne,
+    jujutsuKaisenTwo,
+    jujutsuKaisenThree,
+    jujutsuKaisenFour,
+    jujutsuKaisenFive,
+    jujutsuKaisenSix,
+    jujutsuKaisenSeven,
+    jujutsuKaisenEight,
+    jujutsuKaisenNine,
+    jujutsuKaisenTen
+}
+
 export {
     images,
-    videos
+    videos,
+    jujutsuKaisenImages
 };
