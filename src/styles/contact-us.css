@@ -183,19 +183,6 @@ textarea {
 }
 
 
-.contact-form__container form button {
-    width: 100%;
-    padding: .5rem 0;
-    font-family: fantasy;
-    font-size: clamp(.9rem, 1vw, 1.1rem);
-    color: var(--secondary-color);
-    background-color: black;
-    letter-spacing: clamp(0, 1vw, 2px);
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-
 @media (max-width: 1000px) {
     .contact-us__design .bubble-text__icon{
         right: 3%;

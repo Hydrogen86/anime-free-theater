@@ -5,7 +5,8 @@ import '../styles/contact-us.css'
 import anyaHoverOut from '../assets/images/anya-1.png'
 import anyaHoverEnter from '../assets/images/anya-2.png'
 import Heart from '../assets/icons/heart.png'
-import Shy from '../assets/images/Shy Pink-Haired.png'
+
+import Button from './Button'
 
 const ContactUs = () => {
     const [image, setImage] = useState(anyaHoverOut);
@@ -41,7 +42,7 @@ const ContactUs = () => {
                         <textarea name="message" id="message" placeholder='type here...' required></textarea><br />
                     </div>
 
-                    <button type='submit'>CONNECT WITH US</button>
+                    <Button className='formSubmitBtn' type='submit' content='CONNECT WITH US' id="formSubmitBtn"/>
                 </form>
             </div>
         </section>

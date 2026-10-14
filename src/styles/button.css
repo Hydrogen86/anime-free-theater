@@ -1,0 +1,36 @@
+
+.formSubmitBtn {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    padding: .5rem 0;
+    font-family: var(--font-bold);
+    font-size: clamp(.9rem, 1vw, 1.1rem);
+    letter-spacing: clamp(0px, 1vw, 2px);
+
+    background-color: #8a5cf65e;
+
+    border: 1px solid #8a5cf6aa;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.formSubmitBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to right,#5c80f6, #8b5cf6, #f65cac);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s ease;
+
+    z-index: -1;
+}
+
+.formSubmitBtn:hover::before {
+    transform: scaleX(1);
+}

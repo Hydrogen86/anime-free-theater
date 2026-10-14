@@ -41,11 +41,11 @@ const Hero = () => {
                 </p>
 
                 <div className="hero__actions">
-                    <a href="#projects" className="hero__btn">
-                        Explore Projects <span>↗</span>
+                    <a href="#gallery" className="hero__btn">
+                        Watch Videos <span>↗</span>
                     </a>
 
-                    <a href="#about" className="hero__link">
+                    <a href="#contact-us" className="hero__link">
                         Contact Us                    </a>
                 </div>
             </div>
