@@ -1,15 +1,13 @@
 import React from 'react'
 import {useState} from 'react'
+import {images} from '../assets/images.js'
+import icons from '../assets/icons.js'
 import '../styles/contact-us.css'
-
-import anyaHoverOut from '../assets/images/anya-1.png'
-import anyaHoverEnter from '../assets/images/anya-2.png'
-import Heart from '../assets/icons/heart.png'
 
 import Button from './Button'
 
 const ContactUs = () => {
-    const [image, setImage] = useState(anyaHoverOut);
+    const [image, setImage] = useState(images.anyaOne);
     return (
         <section className='contact-us' id='contact-us'>
             <div className="contact-us__design">
@@ -22,10 +20,10 @@ const ContactUs = () => {
 
                     <div className="triangle"></div>
                 </div>
-                <img src={Heart} className='bubble-text__icon' alt="" />
+                <img src={icons.heart} className='bubble-text__icon' alt="" />
                 <img src={image} 
-                onMouseEnter={() => setImage(anyaHoverEnter)}
-                onMouseLeave={() => setImage(anyaHoverOut)}
+                onMouseEnter={() => setImage(images.anyaTwo)}
+                onMouseLeave={() => setImage(images.anyaOne)}
                 className='about-us__main-image' alt="contact-us__image" />
                 <div className="contact-us__text-heading">
                     <span>Do not touch Anya!</span>

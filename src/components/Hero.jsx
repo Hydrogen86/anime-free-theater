@@ -1,16 +1,16 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
+import {images} from '../assets/images.js'
 import '../styles/hero.css';
 
-//Images
-import bleach from '../assets/images/bleach.jpg'
-import haikyuu2 from '../assets/images/haikyuu 2.jpg'
-import haikyuu from '../assets/images/haikyuu.jpg'
-import acientMagnus from '../assets/images/acient-magnus-bride.jpg'
-import onePiece from '../assets/images/one-piece.jpg'
-import onePunchMan from '../assets/images/one-punch-man.jpg'
-
-const images = [bleach, haikyuu, haikyuu2, acientMagnus, onePiece, onePunchMan];
+const heroImages = [
+        images.acientMagnusBride, 
+        images.bleach, 
+        images.haikyuOne,
+        images.haikyuTwo,
+        images.onePieace,
+        images.onePunchMan
+    ];
 
 
 const Hero = () => {
@@ -19,14 +19,14 @@ const Hero = () => {
 
     useEffect(() =>{
         const interval = setInterval(()=> {
-            setCurrentIndex(prev => (prev + 1) % images.length);
+            setCurrentIndex(prev => (prev + 1) % heroImages.length);
         }, 3000);
         return () => clearInterval(interval);
     }, []);
 
     return (
         <section className="hero"
-            style={{ backgroundImage: `url("${images[currentIndex]}")` }}
+            style={{ backgroundImage: `url("${heroImages[currentIndex]}")` }}
         >
             <div className="opacity"></div>
 
