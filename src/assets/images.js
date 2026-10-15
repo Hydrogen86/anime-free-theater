@@ -28,6 +28,7 @@ import jujutsuKaisenSeven from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kai
 import jujutsuKaisenEight from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-8.jpg'
 import jujutsuKaisenNine from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-9.jpg'
 import jujutsuKaisenTen from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-10.jpg'
+import jujutsuKaisenEleven from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-11.jpg'
 
 
 const images = {
@@ -87,7 +88,7 @@ const videos = [
     }
 ]
 
-const jujutsuKaisenImages = {
+const jujutsuKaisenImages = [
     jujutsuKaisenOne,
     jujutsuKaisenTwo,
     jujutsuKaisenThree,
@@ -97,8 +98,9 @@ const jujutsuKaisenImages = {
     jujutsuKaisenSeven,
     jujutsuKaisenEight,
     jujutsuKaisenNine,
-    jujutsuKaisenTen
-}
+    jujutsuKaisenTen,
+    jujutsuKaisenEleven
+]
 
 export {
     images,
