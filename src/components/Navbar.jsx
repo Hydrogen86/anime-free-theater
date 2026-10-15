@@ -1,9 +1,15 @@
-import React from 'react'
+import { useState } from 'react'
 import logo from '../assets/icons/logo.jpg'
 import Swal from 'sweetalert2'
 import '../styles/header.css'
 
 const Navbar = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const showAlert = () => {
     Swal.fire({
@@ -20,14 +26,14 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </div>
 
-      <nav>
-        <a href="#" onClick={showAlert}>Home</a>
-        <a href="#about-us">About Us</a>
-        <a href="#contact-us">Contact Us</a>
-        <a href="#gallery">Videos</a>
+      <nav className={isMenuOpen ? "nav-open" : ""}>
+        <a href="#" onClick={() => setIsMenuOpen(false)}>Home</a>
+        <a href="#about-us" onClick={() => setIsMenuOpen(false)}>About Us</a>
+        <a href="#contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
+        <a href="#gallery" onClick={() => setIsMenuOpen(false)}>Videos</a>
       </nav>
 
-      <div className="humburger">
+      <div className="humburger" onClick={toggleMenu}>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
