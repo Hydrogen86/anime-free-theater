@@ -1,7 +1,7 @@
 @import url(../App.css);
 
 .gallery-section {
-    padding: 2rem;
+    padding: (1rem, 5vw, 2rem);
     color: var(--secondary-color);
     font-family: var(--font-light);
 }
@@ -22,7 +22,7 @@
 }
 
 .gallery {
-    padding: 1rem;
+    padding: clamp(.5rem, 5vw, 1rem);
     display: flex;
     gap: .5rem;
     justify-content: center;
@@ -32,7 +32,7 @@
 
 .gallery-item {
     background-color: var(--light-black);
-    width: clamp(300px, 5vw, 450px);
+    width: clamp(280px, 5vw, 450px);
     display: flex;
     flex-direction: column;
     align-items: center;
