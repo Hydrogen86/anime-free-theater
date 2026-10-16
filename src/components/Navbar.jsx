@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import logo from '../assets/icons/logo.jpg'
-import Swal from 'sweetalert2'
 import '../styles/header.css'
 
 const Navbar = () => {
@@ -9,15 +8,6 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const showAlert = () => {
-    Swal.fire({
-      title: 'Hello Anime Fam!',
-      text: `Sorry! the Navigation button is not available, Webpage is not yet updated`,
-      icon: 'warning',
-      confirmButtonText: "Let's Go!"
-    });
   };
 
   return (

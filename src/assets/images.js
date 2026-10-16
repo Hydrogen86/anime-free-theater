@@ -30,6 +30,36 @@ import jujutsuKaisenNine from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kais
 import jujutsuKaisenTen from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-10.jpg'
 import jujutsuKaisenEleven from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-11.jpg'
 
+//----------------------------------------------------------
+//--------------JUJUTSU KAISEN------------------------------
+//----------------------------------------------------------
+import hunterOne from '../assets/gallery-img/hunterX/hunterX-1.jpg'
+import hunterTwo from '../assets/gallery-img/hunterX/hunterX-2.jpg'
+import hunterThree from '../assets/gallery-img/hunterX/hunterX-3.png'
+import hunterFour from '../assets/gallery-img/hunterX/hunterX-4.jpg'
+import hunterFive from '../assets/gallery-img/hunterX/hunterX-5.jpg'
+import hunterSix from '../assets/gallery-img/hunterX/hunterX-6.jpg'
+import hunterSeven from '../assets/gallery-img/hunterX/hunterX-7.jpg'
+import hunterEight from '../assets/gallery-img/hunterX/hunterX-8.jpg'
+import hunterNine from '../assets/gallery-img/hunterX/hunterX-9.jpg'
+import hunterTen from '../assets/gallery-img/hunterX/hunterX-10.jpg'
+
+//----------------------------------------------------------
+//--------------JUJUTSU KAISEN------------------------------
+//----------------------------------------------------------
+import narutoOne from '../assets/gallery-img/naruto/naruto-1.jpg'
+import narutoTwo from '../assets/gallery-img/naruto/naruto-2.jpg'
+import narutoThree from '../assets/gallery-img/naruto/naruto-3.jpg'
+import narutoFour from '../assets/gallery-img/naruto/naruto-4.jpg'
+import narutoFive from '../assets/gallery-img/naruto/naruto-5.jpg'
+import narutoSix from '../assets/gallery-img/naruto/naruto-6.jpg'
+import narutoSeven from '../assets/gallery-img/naruto/naruto-7.jpg'
+import narutoEight from '../assets/gallery-img/naruto/naruto-8.jpg'
+import narutoNine from '../assets/gallery-img/naruto/naruto-9.png'
+import narutoTen from '../assets/gallery-img/naruto/naruto-10.jpg'
+
+
+
 
 const images = {
     acientMagnusBride,
@@ -102,8 +132,44 @@ const jujutsuKaisenImages = [
     jujutsuKaisenEleven
 ]
 
+const hunterXhunterImages = [
+    hunterOne,
+    hunterTwo,
+    hunterThree,
+    hunterFour,
+    hunterFive,
+    hunterSix,
+    hunterSeven,
+    hunterEight,
+    hunterNine,
+    hunterTen
+]
+
+const narutoImages = [
+    narutoOne,
+    narutoTwo,
+    narutoThree,
+    narutoFour,
+    narutoFive,
+    narutoSix,
+    narutoSeven,
+    narutoEight,
+    narutoNine,
+    narutoTen
+]
+
+const folderName = [
+    "Jujutsu Kaisen",
+    "Naruto Shippuden",
+    "Hunter X Hunter"
+]
+
+
 export {
     images,
     videos,
-    jujutsuKaisenImages
+    jujutsuKaisenImages,
+    narutoImages,
+    hunterXhunterImages,
+    folderName
 };
