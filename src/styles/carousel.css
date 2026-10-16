@@ -11,25 +11,20 @@ button {
 }
 
 .carousel {
-    background-color: rgb(106, 52, 255);
     width: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .carousel-title {
-    font-size: clamp(2rem, 12vw, 7.6rem);
+    font-size: clamp(3rem, 12vw, 7.6rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.02em;
-    position: absolute;
-    text-align: center;
-    top: 5rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
     pointer-events: none;
     white-space: nowrap;
 
@@ -49,6 +44,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: clamp(1rem, 1vw, 2rem) 0;
 }
 
 .carousel-track {
@@ -56,9 +52,7 @@ button {
     align-items: center;
     gap: 1rem;
     width: 100%;
-    margin-top: 10rem;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -75,7 +69,7 @@ button {
 }
 
 .carousel .card {
-    flex: 0 0 380px;
+    flex: 0 0 clamp(180px, 27vw, 390px);
     scroll-snap-align: center;
 }
 
@@ -95,14 +89,13 @@ Only the centered image is colored
     transform: scale(1.03);
 }
 
+
 @media (max-width: 600px) {
-    .carousel .card {
-        flex: 0 0 180px;
-    }
+
     .carousel .card img {
         display: block;
-        width: 280px;
-        height: 380px;
+        width: 290px;
+        height: 390px;
         object-fit: cover;
         border-radius: 16px;
     }
