@@ -16,6 +16,43 @@ const Carousel = () => {
         else {setCurrentIndex(prev => (prev + 1) % imageFolder.length)}
     }
 
+    useEffect (() => {
+        const track = trackRef.current
+
+        if (!track) return;
+
+        const interval = setInterval(() => {
+            const firstCard = track.querySelector(".card")
+
+            if (!firstCard) return
+
+            const cardWidth = firstCard.getBoundingClientRect().width;
+            const styles = window.getComputedStyle(track)
+            const gap = parseFloat(styles.columnGap) || parseFloat(styles.gap) || 0
+
+            const scrollAmount = cardWidth + gap
+
+            //Move the image to the right
+            if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 1) {
+                //Return to the beginning when reaching the end
+                track.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                })
+                setCount(prev => prev = 0)
+            } else {
+                track.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                })
+                setCount(prev => prev + 1);
+            }
+        }, 3000) //3 second
+
+    }, [currentIndex])
+
+    
+
   return (
 
     <section className='carousel'>
@@ -25,7 +62,7 @@ const Carousel = () => {
                 <button className='right-arrow' onClick={ () => handleClickLimit("prev") }>
                     <img src={icons.leftArrow} alt="arrows" />
                 </button>
-                <h1 className='carousel-title'>{folderName[currentIndex]}</h1>
+                <h1 className='carousel-title'>{folderName[currentIndex]} </h1>
                 <button className='left-arrow' onClick={ () => handleClickLimit("next") }>
                     <img src={icons.rightArrow} alt="arrows" />
                 </button>

@@ -54,7 +54,7 @@ button {
     display: flex;
     align-items: baseline;
     justify-content: center;
-    gap: clamp(1rem, 8vw, 4rem);
+    gap: clamp(.5rem, 2vw, 4rem);
 
     button {
         opacity: 80%;
@@ -94,14 +94,7 @@ button {
     height: 480px;
     object-fit: cover;
     border-radius: 16px;
-    /* filter: grayscale(100%);
-    transition: filter 0.4s ease, transform 0.4s ease; */
-}
 
-/* Only the centered image is colored */
-.carousel .card.active img {
-    filter: grayscale(0%);
-    transform: scale(1.03);
 }
 
 .scroll-bar {
@@ -109,7 +102,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: clamp(.5rem, 5vw, 2rem);
-    margin-top: clamp(1rem, 10vw, 2rem);
+    margin-top: clamp(1rem, 10vw, 2.5rem);
     width: 100%;
 }
 .scroll-bar .indicator {
@@ -119,9 +112,7 @@ button {
     border-radius: 50%;
     background-color: #5c5c5c;
 }
-.indicator:nth-child(1) {
-    background-color: white;
-}
+
 
 @media (max-width: 600px) {
 
