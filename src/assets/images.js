@@ -28,7 +28,6 @@ import jujutsuKaisenSeven from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kai
 import jujutsuKaisenEight from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-8.jpg'
 import jujutsuKaisenNine from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-9.jpg'
 import jujutsuKaisenTen from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-10.jpg'
-import jujutsuKaisenEleven from '../assets/gallery-img/jujutsu-kaisen/jujutsu-kaisen-11.jpg'
 
 //----------------------------------------------------------
 //--------------JUJUTSU KAISEN------------------------------
@@ -128,8 +127,7 @@ const jujutsuKaisenImages = [
     jujutsuKaisenSeven,
     jujutsuKaisenEight,
     jujutsuKaisenNine,
-    jujutsuKaisenTen,
-    jujutsuKaisenEleven
+    jujutsuKaisenTen
 ]
 
 const hunterXhunterImages = [

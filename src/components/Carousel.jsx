@@ -39,6 +39,14 @@ const Carousel = () => {
                 ))}              
             </div>
 
+            <div className="scroll-bar">
+                <div className="indicator"></div>
+                <div className="indicator"></div>
+                <div className="indicator"></div>
+                <div className="indicator"></div>
+                <div className="indicator"></div>
+            </div>
+
         </div>
     </section>
   )
