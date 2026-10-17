@@ -5,8 +5,8 @@ button {
     border: none;
 
     img {
-        width: clamp(25px, 10vw, 65px);
-        height: clamp(25px, 10vw, 65px);
+        width: clamp(25px, 10vw, 105px);
+        height: clamp(25px, 10vw, 105px);
     }
 }
 
@@ -22,7 +22,7 @@ button {
 }
 
 .carousel-title {
-    font-size: clamp(2rem, 12vw, 7.6rem);
+    font-size: clamp(1rem, 10vw, 7.6rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.02em;
@@ -40,12 +40,26 @@ button {
     color: transparent;
 }
 
+
 .carousel-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: clamp(1rem, 1vw, 2rem) 0;
+}
+
+.carousel-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: clamp(1rem, 8vw, 4rem);
+
+    button {
+        opacity: 80%;
+        cursor: pointer;
+    }
 }
 
 .carousel-track {
@@ -54,6 +68,7 @@ button {
     gap: 1rem;
     width: 100%;
     padding: 0 1rem;
+    max-width: 1440px;
 
     overflow-x: auto;
     overflow-y: hidden;

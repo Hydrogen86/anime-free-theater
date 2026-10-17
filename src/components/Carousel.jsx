@@ -19,13 +19,17 @@ const Carousel = () => {
   return (
 
     <section className='carousel'>
-        <h1 className='carousel-title'>{folderName[currentIndex]}</h1>
-
         <div className="carousel-container">
 
-            <button className='right-arrow' onClick={ () => handleClickLimit("prev") }>
-                <img src={icons.leftArrow} alt="arrows" />
-            </button>
+            <div className="carousel-header">
+                <button className='right-arrow' onClick={ () => handleClickLimit("prev") }>
+                    <img src={icons.leftArrow} alt="arrows" />
+                </button>
+                <h1 className='carousel-title'>{folderName[currentIndex]}</h1>
+                <button className='left-arrow' onClick={ () => handleClickLimit("next") }>
+                    <img src={icons.rightArrow} alt="arrows" />
+                </button>
+            </div>
 
             <div className="carousel-track" ref={trackRef}>
                 {imageFolder[currentIndex].map((img, index) => (
@@ -34,10 +38,6 @@ const Carousel = () => {
                     </div>
                 ))}              
             </div>
-
-            <button className='left-arrow' onClick={ () => handleClickLimit("next") }>
-                <img src={icons.rightArrow} alt="arrows" />
-            </button>
 
         </div>
     </section>
