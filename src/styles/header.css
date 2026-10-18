@@ -46,11 +46,11 @@ header {
         align-items: center;
         justify-content: center;
         z-index: 5000;
+        cursor: pointer;
 
-        .line {
-            background-color: var(--secondary-color);
-            height: 3px;
-            width: 100%;
+        img {
+            width: 25px;
+            height: 25px;
         }
     }
 }

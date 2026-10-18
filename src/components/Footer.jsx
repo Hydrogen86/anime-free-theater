@@ -6,7 +6,7 @@ import '../styles/footer.css';
 
 const Footer = () => {
     const socialIcons = Object.entries(icons).filter(
-        ([name]) => (name !== 'logo' && name !== 'heart') && (name !== 'rightArrow' && name !== 'leftArrow')
+        ([name]) => (name !== 'logo' && name !== 'heart') && (name !== 'rightArrow' && name !== 'leftArrow') && (name !== 'menu' && name !== 'close')
     );
 
     return (

@@ -1,19 +1,24 @@
 import { useState } from 'react'
-import logo from '../assets/icons/logo.jpg'
+import icons from '../assets/icons.js'
 import '../styles/header.css'
 
 const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentIcon, setCurrentIcon] = useState(icons.menu)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMenuIcon = () => {
+    setCurrentIcon(prev => prev === icons.menu ? icons.close : icons.menu)
+  }
+
   return (
     <header>
       <div className="logo-container">
-        <img src={logo} alt="logo" />
+        <img src={icons.logo} alt="logo" />
       </div>
 
       <nav className={isMenuOpen ? "nav-open" : ""}>
@@ -24,9 +29,11 @@ const Navbar = () => {
       </nav>
 
       <div className="humburger" onClick={toggleMenu}>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
+        <img 
+          src={currentIcon} 
+          onClick={handleMenuIcon}
+          alt="humburger-icons" 
+        />
       </div>
     </header>
   )
