@@ -22,15 +22,14 @@ button {
 }
 
 .carousel-title {
-    font-size:clamp(1.5rem, 2vw, 7.6rem);
-    font-weight: 900;
+    font-size: clamp(1.5rem, 8vw, 7.6rem);
+    font-weight: (600, 30vw, 900);
     text-transform: uppercase;
     letter-spacing: -0.02em;
     pointer-events: none;
     white-space: nowrap;
-    width: clamp(200px, 20vw, 950px);
+    width: clamp(230px, 80vw, 950px);
     text-align: center;
-    
 
     background: linear-gradient(
         to bottom,

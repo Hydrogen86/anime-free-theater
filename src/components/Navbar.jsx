@@ -5,14 +5,11 @@ import '../styles/header.css'
 const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentIcon, setCurrentIcon] = useState(icons.menu)
-
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleMenuIcon = () => {
-    setCurrentIcon(prev => prev === icons.menu ? icons.close : icons.menu)
+    setIsMenuOpen(prev => !prev)
+  }
+  const closeMenu = () => {
+    setIsMenuOpen(false)
   }
 
   return (
@@ -22,19 +19,24 @@ const Navbar = () => {
       </div>
 
       <nav className={isMenuOpen ? "nav-open" : ""}>
-        <a href="#" onClick={() => setIsMenuOpen(false)}>Home</a>
-        <a href="#about-us" onClick={() => setIsMenuOpen(false)}>About Us</a>
-        <a href="#contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
-        <a href="#gallery" onClick={() => setIsMenuOpen(false)}>Videos</a>
+        <a href="#" onClick={closeMenu}>Home</a>
+        <a href="#about-us" onClick={closeMenu}>About Us</a>
+        <a href="#contact-us" onClick={closeMenu}>Contact Us</a>
+        <a href="#gallery" onClick={closeMenu}>Videos</a>
       </nav>
 
-      <div className="humburger" onClick={toggleMenu}>
+      <button 
+        className="humburger"
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isMenuOpen}>
+
         <img 
-          src={currentIcon} 
-          onClick={handleMenuIcon}
+          src={isMenuOpen ? icons.close : icons.menu}
           alt="humburger-icons" 
         />
-      </div>
+
+      </button>
     </header>
   )
 }

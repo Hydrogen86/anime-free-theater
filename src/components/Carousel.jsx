@@ -10,6 +10,7 @@ const Carousel = () => {
     
     const imageFolder = [ jujutsuKaisenImages, narutoImages, hunterXhunterImages ]
     const [currentIndex, setCurrentIndex] = useState(0)
+    // const [count, setCount] = useState(0)
 
     const handleClickLimit = (action) => {
         if (action === "prev") { setCurrentIndex(prev => (prev - 1 + imageFolder.length) % imageFolder.length) }
@@ -39,13 +40,13 @@ const Carousel = () => {
                     left: 0,
                     behavior: "smooth"
                 })
-                setCount(prev => prev = 0)
+                // setCount(prev => prev = 0)
             } else {
                 track.scrollBy({
                     left: scrollAmount,
                     behavior: "smooth"
                 })
-                setCount(prev => prev + 1);
+                // setCount(prev => prev + 1);
             }
         }, 3000) //3 second
 
