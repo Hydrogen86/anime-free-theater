@@ -57,7 +57,6 @@ button {
     align-items: baseline;
     justify-content: center;
     gap: clamp(.5rem, 2vw, 4rem);
-    background-color: black;
 
     button {
         opacity: 80%;
