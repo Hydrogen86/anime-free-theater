@@ -158,7 +158,7 @@ const narutoImages = [
 
 const folderName = [
     "Jujutsu Kaisen",
-    "Naruto Shippuden",
+    "Naruto",
     "Hunter X Hunter"
 ]
 

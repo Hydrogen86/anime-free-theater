@@ -5,8 +5,8 @@ button {
     border: none;
 
     img {
-        width: clamp(25px, 10vw, 105px);
-        height: clamp(25px, 10vw, 105px);
+        width: clamp(20px, 8vw, 105px);
+        height: clamp(20px, 8vw, 105px);
     }
 }
 
@@ -22,13 +22,14 @@ button {
 }
 
 .carousel-title {
-    font-size: clamp(.8rem, 8vw, 7.6rem);
+    font-size:clamp(1.5rem, 2vw, 7.6rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.02em;
     pointer-events: none;
     white-space: nowrap;
-    max-width: (250px, 80vw, 800px);
+    width: clamp(200px, 20vw, 950px);
+    text-align: center;
     
 
     background: linear-gradient(
@@ -92,8 +93,8 @@ button {
 
 .carousel .card img {
     display: block;
-    width: 300px;
-    height: 480px;
+    width: clamp(250px, 30vw, 300px);
+    height: clamp(350px, 30vw, 480px);
     object-fit: cover;
     border-radius: 16px;
 
@@ -115,14 +116,3 @@ button {
     background-color: #5c5c5c;
 }
 
-
-@media (max-width: 600px) {
-
-    .carousel .card img {
-        display: block;
-        width: 290px;
-        height: 390px;
-        object-fit: cover;
-        border-radius: 16px;
-    }
-}
