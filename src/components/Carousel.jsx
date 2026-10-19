@@ -13,8 +13,11 @@ const Carousel = () => {
     // const [count, setCount] = useState(0)
 
     const handleClickLimit = (action) => {
-        if (action === "prev") { setCurrentIndex(prev => (prev - 1 + imageFolder.length) % imageFolder.length) }
-        else {setCurrentIndex(prev => (prev + 1) % imageFolder.length)}
+        if (action === "prev") { 
+            setCurrentIndex(prev => (prev - 1 + imageFolder.length) % imageFolder.length) 
+        } else {
+            setCurrentIndex(prev => (prev + 1) % imageFolder.length)
+        }
     }
 
     useEffect (() => {
@@ -48,7 +51,7 @@ const Carousel = () => {
                 })
                 // setCount(prev => prev + 1);
             }
-        }, 3000) //3 second
+        }, 3000)
 
     }, [currentIndex])
 

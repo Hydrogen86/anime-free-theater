@@ -28,7 +28,7 @@ button {
     letter-spacing: -0.02em;
     pointer-events: none;
     white-space: nowrap;
-    width: clamp(230px, 80vw, 950px);
+    width: clamp(220px, 70vw, 950px);
     text-align: center;
 
     background: linear-gradient(
@@ -67,7 +67,7 @@ button {
 .carousel-track {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: clamp(.5rem, 3vw, 1rem);
     width: 100%;
     padding: 0 1rem;
     max-width: clamp(300px, 90vw, 1800px);
@@ -97,6 +97,24 @@ button {
     object-fit: cover;
     border-radius: 16px;
 
+    /* Animation */
+    animation: shrink linear both;
+    animation-timeline: view(inline);
+    animation-range: entry 0% exit 100%;
+}
+
+@keyframes shrink {
+    0%, 100% {
+        scale: 0.7;
+        opacity: 0.4;
+        
+    }
+
+    50% {
+        scale: 1;
+        opacity: 1;
+        
+    }
 }
 
 .scroll-bar {
