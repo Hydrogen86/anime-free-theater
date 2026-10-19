@@ -21,7 +21,7 @@ footer {
 
 .heading-title {
     font-size: 3rem;
-    font-family: fantasy;
+    font-family: var(--font-bold);
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 2.8rem;

@@ -40,6 +40,8 @@ button {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    letter-spacing: .5rem;
 }
 
 

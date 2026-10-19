@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 :root {
   --primary-color: #111111;
@@ -6,7 +7,7 @@
   --highlights-color: #8b5cf6;
   --light-black: #d473f217;
 
-  --font-bold: fantasy;
+  --font-bold: 'Bangers', fantasy;;
   --font-light: "Inter", sans-serif;
 }
 
@@ -29,5 +30,5 @@ body {
       transparent 35%),
     linear-gradient(135deg, #0b0d17, #111526 60%, #090b12)
   ;
-  font-family: fantasy;
+  font-family: var(--font-bold);
 }
