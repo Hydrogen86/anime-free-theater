@@ -6,13 +6,19 @@ import confused from './images/confused.png'
 import haikyuOne from './images/haikyu-1.jpg'
 import haikyuTwo from './images/haikyu-2.jpg'
 import itachi from './images/itachi.jpg'
-import killua from './images/killua.png'
 import okayOne from './images/okay-1.png'
 import okayTwo from './images/okay-2.png'
 import onePiece from './images/one-piece.jpg'
 import onePunchMan from './images/one-punch-man.jpg'
 import shy from './images/Shy-Pink-Haired.png'
 import sukuna from './images/sukuna.png'
+
+
+//----------------------------------------------------------
+//------------------CONTACT US------------------------------
+//----------------------------------------------------------
+import yuujiro from './images/yuujiro-hanma-no-BG.png'
+import killua from './images/killua.png'
 
 
 //----------------------------------------------------------
@@ -70,6 +76,7 @@ const images = {
     haikyuTwo,
     itachi,
     killua,
+    yuujiro,
     okayOne,
     okayTwo,
     onePiece,

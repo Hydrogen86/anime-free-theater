@@ -7,6 +7,7 @@
 }
 
 .gallery__head-text {
+    margin-top: clamp(1rem, 4vw, 2rem);
     display: flex;
     align-items: baseline;
     max-width: 400px;

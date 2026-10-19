@@ -20,40 +20,46 @@ const Carousel = () => {
         }
     }
 
-    useEffect (() => {
-        const track = trackRef.current
+    useEffect(() => {
+        const track = trackRef.current;
 
         if (!track) return;
 
         const interval = setInterval(() => {
-            const firstCard = track.querySelector(".card")
+            const firstCard = track.querySelector(".card");
 
-            if (!firstCard) return
+            if (!firstCard) return;
 
             const cardWidth = firstCard.getBoundingClientRect().width;
-            const styles = window.getComputedStyle(track)
-            const gap = parseFloat(styles.columnGap) || parseFloat(styles.gap) || 0
+            const styles = window.getComputedStyle(track);
 
-            const scrollAmount = cardWidth + gap
+            const gap =
+                parseFloat(styles.columnGap) ||
+                parseFloat(styles.gap) ||
+                0;
 
-            //Move the image to the right
-            if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 1) {
-                //Return to the beginning when reaching the end
+            const scrollAmount = cardWidth + gap;
+
+            const maxScrollLeft =
+                track.scrollWidth - track.clientWidth;
+
+            if (track.scrollLeft >= maxScrollLeft - 2) {
                 track.scrollTo({
                     left: 0,
                     behavior: "smooth"
-                })
-                // setCount(prev => prev = 0)
+                });
             } else {
                 track.scrollBy({
                     left: scrollAmount,
                     behavior: "smooth"
-                })
-                // setCount(prev => prev + 1);
+                });
             }
-        }, 3000)
+        }, 3000);
 
-    }, [currentIndex])
+        // Stop the timer when the component unmounts
+        return () => clearInterval(interval);
+
+    }, []);
 
     
 
