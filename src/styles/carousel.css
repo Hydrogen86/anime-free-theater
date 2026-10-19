@@ -41,7 +41,7 @@ button {
     background-clip: text;
     color: transparent;
 
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
 }
 
 
@@ -134,4 +134,3 @@ button {
     border-radius: 50%;
     background-color: #5c5c5c;
 }
-
