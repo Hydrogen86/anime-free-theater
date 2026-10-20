@@ -3,9 +3,11 @@ import '../styles/button.css'
 
 const Button = ({id, className, type, content}) => {
   return (
-    <button id={id} type={type} className={className} >
+    <div className='btn-container'>
+      <button id={id} type={type} className={className} >
         <span>{content}</span>
-    </button>
+      </button>
+    </div>
   )
 }
 

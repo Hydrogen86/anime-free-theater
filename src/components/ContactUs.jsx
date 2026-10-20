@@ -1,5 +1,4 @@
-import React from 'react'
-import {useState} from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {images} from '../assets/images.js'
 import icons from '../assets/icons.js'
 import '../styles/contact-us.css'
@@ -8,6 +7,23 @@ import Button from './Button'
 
 const ContactUs = () => {
     const [image, setImage] = useState(images.anyaOne);
+    const timerRef = useRef(null)
+
+    const handleMouseClick = () => {
+        setImage( images.anyaTwo )
+
+        clearTimeout(timerRef.current)
+
+        timerRef.current = setTimeout(() => {
+            setImage(images.anyaOne)
+        }, 3000)
+    }
+
+    useEffect(() => {
+        return () => clearTimeout(timerRef.current)
+    }, [])
+
+
     return (
         <section className='contact-us' id='contact-us'>
             <div className="contact-us__design">
@@ -22,8 +38,7 @@ const ContactUs = () => {
                 </div>
                 <img src={icons.heart} className='bubble-text__icon' alt="" />
                 <img src={image} 
-                onMouseEnter={() => setImage(images.anyaTwo)}
-                onMouseLeave={() => setImage(images.anyaOne)}
+                onClick={ handleMouseClick }
                 className='about-us__main-image' alt="contact-us__image" />
                 <div className="contact-us__text-heading">
                     <span>Do not touch Anya!</span>
