@@ -1,11 +1,11 @@
 import Swal from "sweetalert2";
 
-const ShowAlert = () => {
+const ShowAlert = (title, text, icon) => {
     Swal.fire({
-      title: 'Hello Anime Fam!',
-      text: `Sorry! the Navigation button is not available, Webpage is not yet updated`,
-      icon: 'warning',
-      confirmButtonText: "Let's Go!"
+      title: title,
+      text: text,
+      icon: icon,
+      confirmButtonText: "OK"
     });
 };
 
