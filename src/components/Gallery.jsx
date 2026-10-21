@@ -1,19 +1,18 @@
 
-import React from 'react';
+import { useState } from 'react';
 import '../styles/gallery.css';
 import { videoList, images} from '../assets/images.js';
 import ShowAlert from './ShowAlert.jsx';
+import icons from '../assets/icons.js';
 
 
 const Gallery = () => {
 
-    const handleClick = () => {
-        ShowAlert(
-            "Update in progress",
-            "This video are not been updated yet",
-            "warning"
-        )
-    }
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleToggle = () => {
+        setIsVisible(prev => !prev);
+    };
 
     return (
         <section className="gallery-section" id="gallery">
@@ -25,7 +24,7 @@ const Gallery = () => {
             <div className="gallery">
 
                 {videoList.map((video, index) => (
-                    <div className="gallery-item" key={index} onClick={handleClick} data-set ={video.video-id}>
+                    <div className="gallery-item" key={index} onClick={handleToggle}>
                         <img
                             src={video.image}
                             alt={video.title}
@@ -42,56 +41,60 @@ const Gallery = () => {
                     </div>
                 ))}
             </div>
+            
+            {/* Video Container Section */}
+            {isVisible && (
+                <div className="video-container">
+                    {/* List All the videos from my drive */}
+                    <h2>Anime Title</h2>
+                    <img src={icons.close} alt="close" onClick={() => setIsVisible(false)}/>
 
-            <div className="video-container">
-                {/* List All the videos from my drive */}
-                <h2>Anime Title</h2>
+                    <div className="episode-container">
 
-                <div className="episode-container">
-
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        <div className="episode">
+                            <p>Episode Number - Anime Title</p>
+                        </div>
+                        <hr />
+                        
                     </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    <div className="episode">
-                        <p>Episode Number - Anime Title</p>
-                    </div>
-                    <hr />
-                    
                 </div>
-            </div>
+            )}
 
         </section>
     );

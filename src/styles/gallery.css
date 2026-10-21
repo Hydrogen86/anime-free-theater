@@ -99,6 +99,21 @@
     z-index: 100;
 
     padding: 2rem;
+    display: block;/* block */
+}
+
+.video-container img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.video-container img:hover {
+    transform: scale(1.1);
 }
 
 .episode-container {
