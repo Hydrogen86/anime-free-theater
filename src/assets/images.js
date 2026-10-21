@@ -12,6 +12,8 @@ import onePiece from './images/one-piece.jpg'
 import onePunchMan from './images/one-punch-man.jpg'
 import shy from './images/Shy-Pink-Haired.png'
 import sukuna from './images/sukuna.png'
+import miniGojo from './images/mini-gojo.png'
+import miniGojoTwo from './images/mini-gojo-2.png'
 
 
 //----------------------------------------------------------
@@ -82,7 +84,9 @@ const images = {
     onePiece,
     onePunchMan,
     shy,
-    sukuna
+    sukuna,
+    miniGojo,
+    miniGojoTwo
 }
 
 const videoList = [
