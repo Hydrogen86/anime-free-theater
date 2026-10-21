@@ -4,6 +4,7 @@
     padding: (1rem, 5vw, 2rem);
     color: var(--secondary-color);
     font-family: var(--font-light);
+    position: relative;
 }
 
 .gallery__head-text {
@@ -76,6 +77,43 @@
         font-weight: 400;
         font-size: clamp(12px, 1vw, 14px);
     }
+}
+
+
+/* 
+    VIDEO CONTAINER
+*/
+.video-container {
+    background-color: #202020;
+    border: 2px, solid #3d3d3d;
+    border-radius: 24px;
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    padding: 2rem;
+}
+
+.episode-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 350px;
+    border: 1px solid #c5c5c5db;
+}
+
+.episode-container .episode{
+    padding: 1rem .5rem;
+
 }
 
 

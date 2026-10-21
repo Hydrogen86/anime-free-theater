@@ -85,42 +85,48 @@ const images = {
     sukuna
 }
 
-const videos = [
+const videoList = [
     {
         "image": acientMagnusBride,
         "title": "Acient Magnus Bride",
         "season": 1,
-        "episodes" : "1-24 episodes"
-    },
-    {
-        "image": bleach,
-        "title": "Bleach",
-        "season": 1,
-        "episodes": "1-64 episodes" 
+        "episodes" : "1-24 episodes",
+        "video-id" : "Acient-Magnus-Bride"
     },
     {
         "image": haikyuOne,
         "title": "Haikyu",
         "season": 1,
-        "episodes": "1-24 episodes" 
+        "episodes": "1-24 episodes" ,
+        "video-id" : "Haikyu-One"
     },
     {
         "image": haikyuTwo,
         "title": "Haikyu",
         "season": 2,
-        "episodes": "1-24 episoded" 
+        "episodes": "1-24 episoded",
+        "video-id" : "Haikyu-Two"
+    },
+    {
+        "image": bleach,
+        "title": "Bleach",
+        "season": 1,
+        "episodes": "1-64 episodes",
+        "video-id" : "Bleach"
     },
     {
         "image": onePiece,
         "title": "One Pieace",
         "season": 1,
-        "episodes": "1-32 episodes" 
+        "episodes": "1-32 episodes",
+        "video-id" : "One-Piece"
     },
     {
         "image": onePunchMan,
         "title": "One Punch Man",
         "season": 1,
-        "episodes": "1-24 episodes" 
+        "episodes": "1-24 episodes",
+        "video-id" : "One-Punch-Man"
     }
 ]
 
@@ -172,7 +178,7 @@ const folderName = [
 
 export {
     images,
-    videos,
+    videoList,
     jujutsuKaisenImages,
     narutoImages,
     hunterXhunterImages,
