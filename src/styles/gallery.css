@@ -226,8 +226,13 @@ body.popup-open {
         text-overflow: ellipsis;
         min-width: 0;
         white-space: nowrap;
+        cursor: pointer;
     }
 }
+.episode:hover {
+    background-color: #2f2f2f;
+}
+
 
 /* WEBKIT SCROLLBAR */
 .episode-container::-webkit-scrollbar {

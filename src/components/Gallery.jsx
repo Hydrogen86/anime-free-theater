@@ -57,6 +57,14 @@ const Gallery = () => {
         return () => clearTimeout(timeRef.current)
     }, [])
 
+    const handleAlert = () => {
+        ShowAlert(
+            "Coming Soon", 
+            "The developer still on progress be patient Anime Fam.",
+            "question"
+        )
+    }
+
 
     return (
         <section className="gallery-section" id="gallery">
@@ -104,7 +112,7 @@ const Gallery = () => {
 
                             {anime.episodes.map((episode, index) => (
                                 <div className="episode" key={index}>
-                                    <p>{episode.title} - {anime.title}</p>
+                                    <p onClick={handleAlert}>{episode.title} - {anime.title}</p>
                                 </div>
                             ))}
 
