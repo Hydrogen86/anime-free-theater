@@ -1,18 +1,44 @@
 
-import { useState } from 'react';
-import '../styles/gallery.css';
-import { videoList, images} from '../assets/images.js';
-import ShowAlert from './ShowAlert.jsx';
-import icons from '../assets/icons.js';
+import { useState, useEffect } from 'react'
+import '../styles/gallery.css'
+import { videoList} from '../assets/images.js'
+import animeEpisodes from '../assets/videos.js'
+import ShowAlert from './ShowAlert.jsx'
+import icons from '../assets/icons.js'
 
 
 const Gallery = () => {
 
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    const [videoId, setVideoId] = useState('')
+    const [animeTitle, setAnimeTitle] = useState('')
 
-    const handleToggle = () => {
-        setIsVisible(prev => !prev);
-    };
+    const handleOpen = (id, title) => {
+        setIsVisible(true)
+        setIsOpen(true)
+        setVideoId(id)
+        setAnimeTitle(title)
+    }
+
+    const handleClose = () => {
+        setIsVisible(false)
+        setIsOpen(false)
+        setVideoId('')
+    }
+
+    useEffect(() => {
+        if (isOpen && isVisible) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = ''
+        }
+
+        return () => {
+            document.body.style.overflow = ''
+        };
+    }, [isOpen, isVisible])
+
 
     return (
         <section className="gallery-section" id="gallery">
@@ -24,7 +50,7 @@ const Gallery = () => {
             <div className="gallery">
 
                 {videoList.map((video, index) => (
-                    <div className="gallery-item" key={index} onClick={handleToggle}>
+                    <div className="gallery-item" key={index} onClick={() => handleOpen(video.videoId, video.title)}>
                         <img
                             src={video.image}
                             alt={video.title}
@@ -40,59 +66,32 @@ const Gallery = () => {
                         </div>
                     </div>
                 ))}
+
             </div>
+
             
             {/* Video Container Section */}
-            {isVisible && (
+            {isVisible && ( <div className="overlay"></div> )}
+            { isVisible && isOpen && (
+
                 <div className="video-container">
-                    {/* List All the videos from my drive */}
-                    <h2>Anime Title</h2>
-                    <img src={icons.close} alt="close" onClick={() => setIsVisible(false)}/>
+                    
+                    <h2>{animeTitle}</h2>
+                    <img src={icons.close} alt="close" onClick={handleClose}/>
 
-                    <div className="episode-container">
+  
+                    {Object.entries(animeEpisodes).filter(([animeName]) => animeName === videoId)
+                    .map(([animeName, anime]) => (
+                        <div className="episode-container">
+                            {anime.episodes.map((episode) => (
+                                <div className="episode">
+                                    <p>{episode.title} - {anime.title}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                
 
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        <div className="episode">
-                            <p>Episode Number - Anime Title</p>
-                        </div>
-                        <hr />
-                        
-                    </div>
                 </div>
             )}
 

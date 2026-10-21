@@ -91,42 +91,42 @@ const videoList = [
         "title": "Acient Magnus Bride",
         "season": 1,
         "episodes" : "1-24 episodes",
-        "video-id" : "Acient-Magnus-Bride"
+        "videoId" : "Acient-Magnus-Bride"
     },
     {
         "image": haikyuOne,
         "title": "Haikyu",
         "season": 1,
         "episodes": "1-24 episodes" ,
-        "video-id" : "Haikyu-One"
+        "videoId" : "Haikyu-Season-One"
     },
     {
         "image": haikyuTwo,
         "title": "Haikyu",
         "season": 2,
         "episodes": "1-24 episoded",
-        "video-id" : "Haikyu-Two"
+        "videoId" : "Haikyu-Season-Two"
     },
     {
         "image": bleach,
         "title": "Bleach",
         "season": 1,
         "episodes": "1-64 episodes",
-        "video-id" : "Bleach"
+        "videoId" : "Bleach"
     },
     {
         "image": onePiece,
         "title": "One Pieace",
         "season": 1,
         "episodes": "1-32 episodes",
-        "video-id" : "One-Piece"
+        "videoId" : "One-Piece"
     },
     {
         "image": onePunchMan,
         "title": "One Punch Man",
         "season": 1,
         "episodes": "1-24 episodes",
-        "video-id" : "One-Punch-Man"
+        "videoId" : "One-Punch-Man"
     }
 ]
 
