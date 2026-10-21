@@ -17,7 +17,7 @@
 }
 
 .contact-us__design .about-us__main-image {
-    width: clamp(200px, 40vw, 450px);
+    width: clamp(200px, 30vw, 450px);
     filter: drop-shadow(30px 10px 20px #0000006d);    
     cursor: pointer;
 }
@@ -25,7 +25,7 @@
 .contact-us__design .bubble-text__icon {
     position: absolute;
     right: 10%;
-    top: 35%;
+    top: 40%;
     width: clamp(30px, 10vw, 80px);
     animation: pulse 1.2s ease-in-out infinite;
     transform-origin: center;
@@ -132,7 +132,7 @@
 .contact-form__container form {
     border: none;
     border-radius: 16px 0 16px 0;
-    padding: clamp(1rem, 3vw, 3rem);
+    padding: clamp(1rem, 2vw, 3rem);
     width: clamp(300px, 30vw, 450px);
     height: clamp(100px, 50vh, 500px);
     background-color: var(--secondary-color);
