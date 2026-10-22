@@ -5,6 +5,7 @@ import { videoList, images} from '../assets/images.js'
 import animeEpisodes from '../assets/videos.js'
 import ShowAlert from './ShowAlert.jsx'
 import icons from '../assets/icons.js'
+import VideoPlayer from './VideoPlayer.jsx'
 
 
 const Gallery = () => {
@@ -13,6 +14,8 @@ const Gallery = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [videoId, setVideoId] = useState('')
     const [animeTitle, setAnimeTitle] = useState('')
+    const [selectedEpisode, setSelectedEpisode] = useState(null)
+    const [episodeOnStream, setEpisodeOnStream] = useState(false)   
     const [currentImage, setCurrentImage] = useState(images.miniGojo)
 
     const handleOpen = (id, title) => {
@@ -26,6 +29,18 @@ const Gallery = () => {
         setIsVisible(false)
         setIsOpen(false)
         setVideoId('')
+        setEpisodeOnStream(false)
+        setSelectedEpisode(null);
+    }
+
+    const handleCloseVideo = () => {
+        setSelectedEpisode(null);
+        setEpisodeOnStream(false);
+    };
+
+    const onStream = (episode) => {
+        setSelectedEpisode(episode)
+        setEpisodeOnStream(true)
     }
 
     useEffect(() => {
@@ -108,15 +123,22 @@ const Gallery = () => {
                     
                     {searchAnime ? (Object.entries(animeEpisodes).filter(([animeName]) => animeName === videoId)
                     .map(([animeName, anime]) => (
-                        <div className="episode-container" key={animeName}>
 
-                            {anime.episodes.map((episode, index) => (
-                                <div className="episode" key={index}>
-                                    <p onClick={handleAlert}>{episode.title} - {anime.title}</p>
+                        !episodeOnStream && 
+                        (<div className="episode-container" key={animeName}>
+
+                            {anime.episodes.map((episode) => (
+                                <div 
+                                    className="episode"  
+                                    onClick={() => onStream(episode)}
+                                    key={episode.id}
+                                >
+                                    <p>{episode.title} - {anime.title}</p>
                                 </div>
                             ))}
 
-                        </div>
+                        </div>)
+
                     ))) : (
 
                        <div className="episode-container no-data">
@@ -134,9 +156,21 @@ const Gallery = () => {
                         </div> 
                     )}
                     
+                    {selectedEpisode && (
+                        <VideoPlayer
+                            videoUrl={selectedEpisode.driveId.replace(
+                                /\/view(\?.*)?$/,
+                                "/preview"
+                                )}
+                            title={selectedEpisode.title}
+                            onClose={handleCloseVideo}
+                        />
+                    )}
 
                 </div>
             )}
+
+
 
         </section>
     );

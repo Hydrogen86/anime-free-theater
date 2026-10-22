@@ -109,14 +109,14 @@ body.popup-open {
     border: 2px solid #3d3d3d;
     border-radius: 12px;
 
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     height: 85vh;
     max-height: 800px;
     box-sizing: border-box;
 
     position: fixed;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
@@ -128,7 +128,7 @@ body.popup-open {
     flex-direction: column;
 
     h2 {
-        font-size: clamp(1rem, 5vw, 2rem);
+        font-size: clamp(1rem, 2.5vw, 2rem);
     }
 }
 

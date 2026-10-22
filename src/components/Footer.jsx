@@ -5,9 +5,13 @@ import icons from '../assets/icons.js';
 import '../styles/footer.css';
 
 const Footer = () => {
-    const socialIcons = Object.entries(icons).filter(
-        ([name]) => (name !== 'logo' && name !== 'heart') && (name !== 'rightArrow' && name !== 'leftArrow') && (name !== 'menu' && name !== 'close')
-    );
+    const socialIcons = [
+        icons.discord,
+        icons.facebook,
+        icons.instagram,
+        icons.tiktok,
+        icons.twitter
+    ]
 
     return (
         <footer>
@@ -20,11 +24,11 @@ const Footer = () => {
                 </span>
 
                 <div className="social-icons">
-                    {socialIcons.map(([name, icon]) => (
+                    {socialIcons.map((icon, index) => (
                         <img
-                            key={name}
                             src={icon}
-                            alt={`${name} social media icon`}
+                            key={index}
+                            alt={`icon-${index}`}
                         />
                     ))}
                 </div>

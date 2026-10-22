@@ -9,6 +9,7 @@ import rightArrow from './icons/right-arrow.png';
 import leftArrow from './icons/left-arrow.png';
 import menu from './icons/menu.png';
 import close from './icons/close.png';
+import backIcon from './icons/back-icon.png';
 
 
 const icons = {
@@ -22,7 +23,8 @@ const icons = {
     leftArrow,
     rightArrow,
     menu,
-    close
+    close,
+    backIcon
 }
 
 export default icons
