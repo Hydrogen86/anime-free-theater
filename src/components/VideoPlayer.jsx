@@ -27,12 +27,11 @@ function VideoPlayer({ videoUrl, title, onClose }) {
                     <img src={icons.backIcon} alt="back-icon" />
                 </button>
 
-                <iframe
-                    src={videoUrl}
-                    title={title}
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                    referrerPolicy="strict-origin-when-cross-origin"
+                <video
+                    src={videoUrl}  
+                    controls
+                    playsInline
+                    preload="metadata"
                 />
             </div>
         </div>

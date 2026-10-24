@@ -156,21 +156,18 @@ const Gallery = () => {
                         </div> 
                     )}
                     
-                    
-
-                </div>
-            )}
-
-            {selectedEpisode && (
+                    {selectedEpisode && (
                         <VideoPlayer
-                            videoUrl={selectedEpisode.driveId.replace(
-                                /\/view(\?.*)?$/,
-                                "/preview"
-                                )}
+                            videoUrl={selectedEpisode.url}
                             title={selectedEpisode.title}
                             onClose={handleCloseVideo}
                         />
                     )}
+
+                </div>
+            )}
+
+            
 
         </section>
     );

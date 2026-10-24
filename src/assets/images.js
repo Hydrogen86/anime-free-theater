@@ -1,15 +1,10 @@
-import acientMagnusBride from './images/acient-magnus-bride.jpg'
-import anyaOne from './images/anya-1.png'
-import anyaTwo from './images/anya-2.png'
-import bleach from './images/bleach.jpg'
+//----------------------------------------------------------
+//----------------------OTHERS------------------------------
+//----------------------------------------------------------
 import confused from './images/confused.png'
-import haikyuOne from './images/haikyu-1.jpg'
-import haikyuTwo from './images/haikyu-2.jpg'
 import itachi from './images/itachi.jpg'
 import okayOne from './images/okay-1.png'
 import okayTwo from './images/okay-2.png'
-import onePiece from './images/one-piece.jpg'
-import onePunchMan from './images/one-punch-man.jpg'
 import shy from './images/Shy-Pink-Haired.png'
 import sukuna from './images/sukuna.png'
 import miniGojo from './images/mini-gojo.png'
@@ -17,11 +12,32 @@ import miniGojoTwo from './images/mini-gojo-2.png'
 
 
 //----------------------------------------------------------
-//------------------CONTACT US------------------------------
+//-----------------------GALLERY----------------------------
+//----------------------------------------------------------
+import bakiBG from './images/baki-BG.jpg'
+import jujutsuKaisenBG from './images/jujutsu-kaisen-BG.jpg'
+import delicousDungeonBG from './images/delicous-in-duneon-BG.jpg'
+
+
+//----------------------------------------------------------
+//------------------HERO SECTION----------------------------
+//----------------------------------------------------------
+import haikyuOne from './images/haikyu-1.jpg'
+import haikyuTwo from './images/haikyu-2.jpg'
+import acientMagnusBride from './images/acient-magnus-bride.jpg'
+import onePiece from './images/one-piece.jpg'
+import onePunchMan from './images/one-punch-man.jpg'
+import bleach from './images/bleach.jpg'
+
+
+
+//----------------------------------------------------------
+//----------------CONTACT US & ABOUT US---------------------
 //----------------------------------------------------------
 import yuujiro from './images/yuujiro-hanma-no-BG.png'
 import killua from './images/killua.png'
-
+import anyaOne from './images/anya-1.png'
+import anyaTwo from './images/anya-2.png'
 
 //----------------------------------------------------------
 //--------------JUJUTSU KAISEN------------------------------
@@ -90,26 +106,13 @@ const images = {
 }
 
 const videoList = [
+    
     {
-        "image": acientMagnusBride,
-        "title": "Acient Magnus Bride",
+        "image": bakiBG,
+        "title": "Baki",
         "season": 1,
-        "episodes" : "1-24 episodes",
-        "videoId" : "Acient-Magnus-Bride"
-    },
-    {
-        "image": haikyuOne,
-        "title": "Haikyu",
-        "season": 1,
-        "episodes": "1-24 episodes" ,
-        "videoId" : "Haikyu-Season-One"
-    },
-    {
-        "image": haikyuTwo,
-        "title": "Haikyu",
-        "season": 2,
         "episodes": "1-24 episoded",
-        "videoId" : "Haikyu-Season-Two"
+        "videoId" : "Baki"
     },
     {
         "image": bleach,
@@ -119,11 +122,32 @@ const videoList = [
         "videoId" : "Bleach"
     },
     {
+        "image": delicousDungeonBG,
+        "title": "Delicious in Dungeon",
+        "season": 1,
+        "episodes": "1-64 episodes",
+        "videoId" : "DeliciousInDungeon"
+    },
+    {
+        "image": haikyuOne,
+        "title": "Haikyu",
+        "season": 1,
+        "episodes": "1-24 episodes" ,
+        "videoId" : "Haikyu"
+    },
+    {
+        "image": jujutsuKaisenBG,
+        "title": "Jujutsu Kaisen",
+        "season": 1,
+        "episodes": "1-24 episodes" ,
+        "videoId" : "JujutsuKaisen"
+    },
+    {
         "image": onePiece,
         "title": "One Pieace",
         "season": 1,
         "episodes": "1-32 episodes",
-        "videoId" : "One-Piece"
+        "videoId" : "OnePiece"
     },
     {
         "image": onePunchMan,
@@ -131,6 +155,13 @@ const videoList = [
         "season": 1,
         "episodes": "1-24 episodes",
         "videoId" : "One-Punch-Man"
+    },
+    {
+        "image": acientMagnusBride,
+        "title": "Acient Magnus Bride",
+        "season": 1,
+        "episodes" : "1-24 episodes",
+        "videoId" : "Acient-Magnus-Bride"
     }
 ]
 
