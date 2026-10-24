@@ -37,7 +37,7 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: flip 6s infinite;
+    animation: flip 8s infinite;
 }
 
 .card-front,
