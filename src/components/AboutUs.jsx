@@ -16,9 +16,9 @@ const AboutUs = () => {
         <div className="about-us__description">
             <h1>ABOUT US</h1>
             <p>
-                Welcome to Anime Theater, your ultimate destination for anime fans! Our platform is designed to bring your favorite anime closer to you, offering a simple and enjoyable way to explore and watch anime. We believe every fan deserves an immersive viewing experience without unnecessary distractions, so you can focus on the stories, characters, and adventures you love.
+              Anime Theater is a personal web development project created for educational and learning purposes only. It serves as a practice platform for exploring web development, user interface design, and anime-themed content presentation.
 
-                Whether you're revisiting timeless classics or discovering your next favorite series, Anime Theater is where your anime journey begins. Sit back, relax, and enjoy the world of anime—all in one place.
+              All anime titles, characters, images, and related content belong to their respective owners. Anime Theater does not claim ownership of any third-party content featured on the platform. This project is intended for educational demonstration and personal learning, not commercial use.
             </p>
         </div>
     </section>
