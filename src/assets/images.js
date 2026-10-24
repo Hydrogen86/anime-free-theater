@@ -125,7 +125,7 @@ const videoList = [
         "image": delicousDungeonBG,
         "title": "Delicious in Dungeon",
         "season": 1,
-        "episodes": "1-64 episodes",
+        "episodes": "1-24 episodes",
         "videoId" : "DeliciousInDungeon"
     },
     {

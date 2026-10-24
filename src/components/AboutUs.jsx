@@ -3,18 +3,16 @@ import '../styles/about-us.css'
 import {images} from '../assets/images.js'
 
 const AboutUs = () => {
-  const [currentImage, setCurrentImage] = useState(images.killua);
-
-  const handleImage = () => {
-    setCurrentImage(prev => prev === images.killua ? images.yuujiro : images.killua)
-  }
-
   return (
     <section className='about-us' id='about-us'>
-        <img src={currentImage}
-          onClick={handleImage} 
-          alt="about-us-image"
-        />
+
+        <div className="flip-card">
+          <div className="inner">
+            <img className='card-front' src={images.killua} alt="front" />
+            <img className='card-back' src={images.yuujiro} alt="back" />
+          </div>
+        </div>
+
         <div className="about-us__description">
             <h1>ABOUT US</h1>
             <p>

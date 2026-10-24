@@ -85,7 +85,7 @@ const Gallery = () => {
         <section className="gallery-section" id="gallery">
             <div className="gallery__head-text">
                 <h3>Video</h3>
-                <span>See all</span>
+                <span onClick={handleAlert}>See all</span>
             </div>
 
             <div className="gallery">
