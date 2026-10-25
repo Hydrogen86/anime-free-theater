@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import { jujutsuKaisenImages, narutoImages, hunterXhunterImages, folderName } from '../assets/images.js'
 import icons from '../assets/icons.js'
 import '../styles/carousel.css'
-import ShowAlert from './ShowAlert.jsx'
+import ScrollAnimation from './ScrollAnimation.jsx'
 
 const Carousel = () => {
 
@@ -68,25 +68,29 @@ const Carousel = () => {
     <section className='carousel'>
         <div className="carousel-container">
 
-            <div className="carousel-header">
-                <button className='right-arrow' onClick={ () => handleClickLimit("prev") }>
-                    <img src={icons.leftArrow} alt="arrows" />
-                </button>
+            <ScrollAnimation className='zoom-in'>
+                <div className="carousel-header">
+                    <button className='right-arrow' onClick={ () => handleClickLimit("prev") }>
+                        <img src={icons.leftArrow} alt="arrows" />
+                    </button>
+\
+                    <h1 className='carousel-title'>{folderName[currentIndex]} </h1>
 
-                <h1 className='carousel-title'>{folderName[currentIndex]} </h1>
-                
-                <button className='left-arrow' onClick={ () => handleClickLimit("next") }>
-                    <img src={icons.rightArrow} alt="arrows" />
-                </button>
-            </div>
+                    <button className='left-arrow' onClick={ () => handleClickLimit("next") }>
+                        <img src={icons.rightArrow} alt="arrows" />
+                    </button>
+                </div>
+            </ScrollAnimation>
 
-            <div className="carousel-track" ref={trackRef}>
-                {imageFolder[currentIndex].map((img, index) => (
-                    <div className="card" key={index} data-index={index} >
-                        <img src={img} alt={`JJK-image ${index + 1}`} draggable="false"/>
-                    </div>
-                ))}              
-            </div>
+            <ScrollAnimation className='fade-up'>
+                <div className="carousel-track" ref={trackRef}>
+                    {imageFolder[currentIndex].map((img, index) => (
+                        <div className="card" key={index} data-index={index} >
+                            <img src={img} alt={`JJK-image ${index + 1}`} draggable="false"/>
+                        </div>
+                    ))}              
+                </div>
+            </ScrollAnimation>
 
             <div className="scroll-bar">
                 <div className="indicator"></div>

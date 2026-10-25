@@ -1,0 +1,50 @@
+/* 
+    GALLERY SECTION
+*/
+/* Initial state */
+.scroll-animate {
+    opacity: 0;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Fade Up */
+.fade-up {
+    transform: translateY(40px);
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Side to Left */
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide from right */
+.slide-right {
+    transform: translateX(50px);
+}
+
+.slide-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom in */
+.zoom-in {
+    transform: scale(0.8);
+}
+
+.zoom-in.show {
+    opacity: 1;
+    transform: scale(1);
+}
