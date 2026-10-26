@@ -73,7 +73,7 @@ const Carousel = () => {
                     <button className='right-arrow' onClick={ () => handleClickLimit("prev") }>
                         <img src={icons.leftArrow} alt="arrows" />
                     </button>
-\
+
                     <h1 className='carousel-title'>{folderName[currentIndex]} </h1>
 
                     <button className='left-arrow' onClick={ () => handleClickLimit("next") }>
